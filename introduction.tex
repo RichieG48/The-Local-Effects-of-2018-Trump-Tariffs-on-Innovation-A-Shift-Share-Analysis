@@ -1,0 +1,67 @@
+\section{Introduction} 
+The year 2018 marked a historic change from decades of U.S. trade liberalization, as the United States enacted unilateral tariff increases on \$303 billion of annual U.S. imports. This return to protectionism escalated into a global trade war, pushing major trading partners, including China, the European Union, Canada, and Mexico, to impose retaliatory tariffs on \$127 billion of U.S. exports.  While the short-run price and welfare effects of these tariffs have been closely studied in the literature, their localized impact on technological innovation remains an open question. This paper asks: What was the direct effect of the 2018 trade war on local U.S. innovation? To answer this, I evaluate the impact of local county-level exposure to the 2018 tariff shocks on changes in regional patenting rates. \newline
+Estimating the local impacts of trade policy is frequently complicated because of endogeneity, as unobserved local macroeconomic trends may simultaneously drive both actual trade flows and regional innovation. To address this, I rely on the shift-share econometric framework developed by \cite{BHJ2022} , which derives identification strictly from the quasi-random assignment of industry-level shocks rather than endogenous local exposure shares. \newline 
+I employ a reduced-form shift-share regression rather than a traditional Two-Stage Least Squares Instrumental Variable design. In a standard 2SLS shift-share design, statutory tariff shocks would be used as an instrument to predict a separate endogenous treatment variable, such as the actual change in local import penetration. However, as demonstrated by \cite{Fajgelbaum2020}, the highly discriminatory 2018 tariffs induced trade diversion. Because U.S. firms heavily diverted their purchases to untargeted countries within the same broad sectors, the statutory tariffs are weak predictors of overall sector-level import changes. A reduced form approach shifts the question from estimating the effect of lost aggregate imports to estimating the intent-to-treat effect, allowing me to evaluate the direct policy impact of the statutory tariff shocks on local innovation. \newline
+To ensure the validity of this research design, this paper approximates a shock-level experimental ideal. I introduce unit-level controls to absorb the electoral targeting of the U.S. tariffs, and incomplete share controls to account for the fact that tariffs exclusively targeted tradable sectors. Furthermore, falsification tests reveal the necessity of including shock-level controls, such as pre-2018 markups, to correct for baseline industry imbalances and achieve conditional quasi-random assignment. \newline
+Finally, because shift-share designs suffer from exposure clustering, where regions with similar industrial structures have mechanically correlated errors, conventional regional standard errors are invalid. Following \cite{BHJ2022}, I use the mathematical equivalence of shift-share estimators to run the regression directly at the shock level. This allows to compute exposure-robust standard errors, that I cluster at the 3-digit NAICS level. 
+My baseline estimates indicate that the 2018 trade war did not produce a statistically detectable effect on short-run regional innovation. Rather than proving that local R\&D incentives remained entirely static, the data simply lack the precision to rule out all economically meaningful shifts in patenting. Furthermore, falsification tests using historical trade and patenting trends confirm these findings are not driven by pre-existing trajectories. Taken together, these results imply that the chaotic, sudden nature of the 2018 statutory tariff assignments failed to generate a measurable causal disruption to the deeply entrenched, multi-year innovation pipelines of U.S. firms.
+
+This paper contributes to three strands of economic literature. First, it adds a new dimension to the contemporary literature analyzing the 2018 U.S. trade war. While studies such as \cite{Amiti2019} and \cite{Fajgelbaum2020} demonstrate that the trade war resulted in trade diversion and complete tariff pass-through to domestic prices, this paper explores the implications of those coping mechanisms for local innovation. I demonstrate that the localized incentive to innovate remained statistically indistinguishable from its pre-war trend, a finding that is consistent with the hypothesis that firms redirected costs to consumers rather than altering their R\&D pipelines. Second, this paper contrasts with traditional models of trade-induced innovation, such as \cite{Bloom2011}, which posit that severe trade shocks force firms to upgrade technology to survive. I demonstrate that the statutory assignment of short-term tariffs characterized by extreme policy uncertainty behaves differently than structural market shifts. Finally, this paper contributes to the broader literature on local labor market responses to trade. Unlike the persistent, multi-decade structural shifts of the "China Shock" documented by \cite{ADH2013}, this study highlights the severe limitations of sudden, politically targeted trade policy as a viable causal instrument for domestic industrial upgrading.
+
+
+% -------------------------------------------
+% Simple image insert
+%\begin{figure}[H] %[H] "corresponds to start the figure Here" 
+%    \centering %alignment can be flushleft, centering or flushright
+    %includegraphics is the command to include graphics or pictures, [Width should be defined with respect to textwidth]{The path/ location of the image in the specified folder}, the image should be either in .png, .jpg, .pdf formats faster processing
+%    \includegraphics[width=0.5\textwidth]{Image/ucl_logo.png} 
+%    \caption[The caption that goes into the list of figures]{\textit{\textbf{The image caption:}} Extended details about the image a.k.a legend}
+%    \label{name the figures for cross reference}
+%\end{figure}
+% -------------------------------------------
+
+
+
+% \cite{benner_2003} % Citation
+
+
+% -------------------------------------------
+% Image with multiple captions
+%\begin{figure}[H]
+%    \begin{flushleft}
+%    \begin{subfigure}[b]{0.5\textwidth}
+%    \includegraphics[width=\textwidth]{Image/ucl_logo.png}
+%    \caption{write the caption}\label{fig:subfig1}
+%    \end{subfigure}
+%    \end{flushleft}
+%        \hfill
+%\begin{subfigure}[b]{0.5\textwidth}
+%    \begin{flushright}
+%    \includegraphics[width=\textwidth]{Image/ucl_logo.png}
+%    \caption{write the caption}
+%    \label{fig:subfig2}
+%    \end{flushright}
+%\end{subfigure}
+%    \caption[The caption that goes into the list of figures]{\textbf{\textit{The image caption:}}Extended details about the image a.k.a legend}
+%    \label{fig:Gel Extaction}
+%\end{figure}
+% -------------------------------------------
+
+
+%\noindent \blindtext 
+
+
+% -------------------------------------------
+% Table (created with a table generator, e.g. https://www.tablesgenerator.com/# )
+%\begin{table}[H]
+%\caption[The caption that goes into the list of tables]{Generic Table}
+%\label{tab:name the table for cross reference}
+%\centering
+%\begin{tabular}{lllll}
+%\cline{1-3}
+%\multicolumn{1}{|c|}{\cellcolor[HTML]{C0C0C0}\textbf{Header 1}} & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}\textbf{Header 2}} & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}\textbf{Header 3}} &  &  \\ \cline{1-3}
+%\multicolumn{1}{|l|}{Content}                                   & \multicolumn{1}{l|}{Content}                                   & \multicolumn{1}{l|}{Content}                                   &  &  \\ \cline{1-3}
+%\multicolumn{1}{|l|}{Content}                                   & \multicolumn{1}{l|}{Content}                                   & \multicolumn{1}{l|}{Content}                                   &  &  \\ \cline{1-3}
+     
+% -------------------------------------------
+
