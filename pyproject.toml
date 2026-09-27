@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tariff-innovation"
+version = "1.0.0"
+description = "Replication code for 'The Direct Effect of the 2018 Trade War on Local Innovation: A Reduced-Form Shift-Share Approach'"
+authors = [{ name = "Gabriel Richard" }]
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.11"
+dependencies = [
+    "pandas>=3.0",
+    "numpy>=2.0",
+    "statsmodels>=0.14",
+    "scipy>=1.10",
+    "pyarrow>=15",
+    "matplotlib>=3.8",
+    "seaborn>=0.13",
+    "plotly>=6.0",
+    "kaleido>=1.0",
+    "addfips>=0.4",
+    "ssaggregate>=0.1",
+    "stargazer==0.0.6",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "ipykernel", "nbconvert"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

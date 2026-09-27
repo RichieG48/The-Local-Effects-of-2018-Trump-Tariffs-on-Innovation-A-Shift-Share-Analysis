@@ -183,7 +183,7 @@ This paper estimates the policy impact of the 2018 United States trade war on lo
 
 % -------------------  INTRODUCTION  ---------------------
 \newpage
-\include{Introduction} % Section/Chapter entries can be done in the Main.tex file or in a  
+\include{introduction} % Section/Chapter entries can be done in the Main.tex file or in a  
                        % separate tex file for longer and more complex documents
 
 
@@ -226,7 +226,7 @@ The validity of the shift-share identification strategy relies on the presence o
 
 To verify that the model's statistical power is not driven by a few dominant industries, I computed the Inverse Herfindahl-Hirschman Index of the shock importance weights. In a shift-share design, the "effective number of shocks" is often much smaller than the raw count of industries; if a few large industries (like automotive or steel) carry all the weight, the standard asymptotic assumptions for the standard errors will fail. By calculating $1/HHI \approx 137.15$, I show that the effective sample size of the shocks is sufficiently large to satisfy the asymptotic requirements of \cite{BHJ2022}. This high effective count ensures that the standard errors are not artificially deflated by industry concentration and that the resulting confidence intervals, including the null-imposed intervals, are robust and reliable.
 
-\input{Tables/descriptive_statistics_table}
+\input{../outputs/tables/descriptive_statistics_table}
 
 % -----------------------------------------------------------------
 % Vertically Stacked Regional Tariff Exposure Heat Maps
@@ -236,7 +236,7 @@ To verify that the model's statistical power is not driven by a few dominant ind
     % Top Panel: Protective Tariffs
     \begin{subfigure}[b]{0.95\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{Image/map_protective.pdf}
+        \includegraphics[width=\textwidth]{../outputs/figures/map_protective.pdf}
         \caption{U.S. Protective Tariffs}
         \label{fig:map_protective}
     \end{subfigure}
@@ -246,7 +246,7 @@ To verify that the model's statistical power is not driven by a few dominant ind
     % Bottom Panel: Retaliatory Tariffs
     \begin{subfigure}[b]{0.95\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{Image/map_retaliatory.pdf}
+        \includegraphics[width=\textwidth]{../outputs/figures/map_retaliatory.pdf}
         \caption{Foreign Retaliatory Tariffs}
         \label{fig:map_retaliatory}
     \end{subfigure}
@@ -280,7 +280,7 @@ Economically, this null first stage is driven by a massive trade diversion effec
 
 This finding provides an empirical justification for abandoning a traditional 2SLS approach. Because massive trade diversion breaks the predictive link between statutory tariffs and overall sector-level import penetration, evaluating actual trade volumes is econometrically invalid here. Instead, I move to a reduced-form shift-share design, where local innovation is regressed directly on the statutory tariff shocks to identify the intent-to-treat direct policy effect of the 2018 trade war.
 
-\input{Tables/first_stage_regression}
+\input{../outputs/tables/first_stage_regression}
 \newpage
 \subsection{Shift-Share Design and Shock-Level Experimental Idea}
 
@@ -305,7 +305,7 @@ To approximate the experimental ideal and isolate the quasi-experimental variati
 % -----------------------------------------------------------------
 \begin{figure}[!htbp]
     \centering
-    \includegraphics[width=0.85\textwidth]{Image/political_targeting.pdf}
+    \includegraphics[width=0.85\textwidth]{../outputs/figures/political_targeting.pdf}
     \caption{Non-Parametric Fit of Tariff Exposure by 2016 GOP Vote Share}
     \label{fig:political_targeting}
     \vspace{0.2cm}
@@ -342,8 +342,8 @@ Similarly, exposure to foreign retaliatory tariffs yields no statistically detec
 Ultimately, both the U.S. output protection and foreign retaliatory tariff results point to the same conclusion: the statutory assignment of the 2018 tariffs did not provide a statistically detectable causal signal sufficient to change the incentive to innovate of U.S. firms.
 
 
-\input{Tables/regression}
-\input{Tables/retaliation_shock_regression}
+\input{../outputs/tables/regression}
+\input{../outputs/tables/retaliation_shock_regression}
 
 
 \newpage
@@ -356,9 +356,9 @@ Table \ref{tab:innovation_pretrend} estimates the baseline shock-level regressio
 
 Further falsification tests on historical trade flows, demonstrate that the Trump administration did not disproportionately impose tariffs on industries that were already experiencing systematic import surges or price anomalies prior to 2018. Mirroring the robustness checks conducted by \cite{Fajgelbaum2020}, Table \ref{tab:trade_pretrends} tests for preexisting trade trends by regressing the 2013–2017 changes in import values (Column 1), import quantities (Column 2), and unit values or prices (Column 3) directly on the 2018 statutory tariff shocks. Across all three trade specifications, the tariff shock coefficients are small and statistically indistinguishable from zero. Furthermore, the regression models yield extremely low F-statistics and near-zero $R^2$ values, indicating that the 2018 tariff have no explanatory power over prior trade dynamics. These null results successfully replicate the findings in the existing trade literature, proving that the industries targeted during the trade war were not already on anomalous trade trajectories and proving the validity of the tariff shocks as a natural experiment.
 
-\input{Tables/pre_trend_regression}
+\input{../outputs/tables/pre_trend_regression}
 
-\input{Tables/pre_trend_trade_regression}
+\input{../outputs/tables/pre_trend_trade_regression}
 \newpage
 \subsection{Controls balance tests}
 
@@ -368,7 +368,7 @@ The balance tests reveal that the U.S. government protected low-markup sectors w
 
 Other falsification tests across standard production characteristics confirm that the 2018 U.S. tariffs were otherwise structurally balanced. As shown in Panel B of Table \ref{tab:balance_tests_stacked}, regressing the 2018 statutory tariff shocks on 2016 industry characteristics, specifically labor intensity, capital intensity, real wages, and the share of high-tech equipment investment, yields insignificant coefficients. These four variables capture the fundamental technological and labor structures of manufacturing sectors. The small coefficients indicate that the Trump administration did not systematically deploy tariffs to protect heavily automated, capital-intensive, high-wage, or technologically advanced industries. Because the tariff assignments hold no explanatory power over these baseline structural dimensions, I can argue that the shocks were as-good-as-randomly assigned within the U.S. economy.\\
 
-\input{Tables/balance_tests}
+\input{../outputs/tables/balance_tests}
 \subsection{Null-imposed confidence intervals}
 
 To further check the robustness of my results, I computed the null-imposed confidence intervals, displayed in Table \ref{tab:robust_cis}, which confirm the validity of the standard asymptotic inference. In shift-share designs, standard exposure-robust standard errors rely on asymptotic approximations that can sometimes be downwardly biased in finite samples. As demonstrated by \cite{Adao2019} and \cite{BHJ2022}, this under-coverage typically occurs when the effective number of shocks is small, or when shocks have heavy-tailed distributions. To correct for this, null-imposed confidence intervals invert a shock-level Lagrange Multiplier test. Instead of relying on the residuals derived from the estimated treatment effect $\hat{\beta}$, which might be artificially close to zero if the model overfits high-leverage shocks, this procedure computes the residual variance under the assumption of the null hypothesis over a grid of hypothetical true effects. The final confidence interval is strictly the collection of all $\beta_0$ values that the data cannot statistically reject, guaranteeing correct coverage.
@@ -376,7 +376,7 @@ To further check the robustness of my results, I computed the null-imposed confi
 The null-imposed confidence intervals are virtually identical to the standard asymptotic intervals. As reported in Table \ref{tab:robust_cis}, the effective number of shocks for the fully controlled specification is $137.15$. Because this effective sample size is large and the exposure shares are well-dispersed, the standard asymptotic approximation holds. For U.S. protective tariffs, the 95\% asymptotic confidence interval of [-79.65, 85.90] barely shifts under the null-imposed correction. Similarly, the retaliatory tariff interval goes from [-27.99, 103.87] asymptotically to [-27.59, 103.46] under the LM test. 
 These null-imposed confidence intervals offer a precise understanding of what these regressions can reliably rule out regarding the trade war's impact on innovation. The intervals provide a clear boundary: we can rule out that a 1 percentage point U.S. protective tariff increase caused a short-term innovation response greater than 0.85 patents per 100,000 residents, or a decline greater than 0.79 patents. These confirm that while we do not observe a statistically significant disruption, the inherent noise in patenting rates requires even larger shocks or longer observation windows to detect the structural shifts predicted by traditional trade-innovation models.
 
-\input{Tables/null_imposed_CI}
+\input{../outputs/tables/null_imposed_CI}
 
 
 \newpage

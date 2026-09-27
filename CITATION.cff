@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the dissertation."
+title: "The Direct Effect of the 2018 Trade War on Local Innovation: A Reduced-Form Shift-Share Approach"
+authors:
+  - family-names: Richard
+    given-names: Gabriel
+type: thesis
+date-released: 2026-05-01
+repository-code: "https://github.com/RichieG48/The-Local-Effects-of-2018-Trump-Tariffs-on-Innovation-A-Shift-Share-Analysis"
+license: MIT
+preferred-citation:
+  type: thesis
+  title: "The Direct Effect of the 2018 Trade War on Local Innovation: A Reduced-Form Shift-Share Approach"
+  authors:
+    - family-names: Richard
+      given-names: Gabriel
+  institution:
+    name: "London School of Economics and Political Science"
+  thesis-type: "MSc Economics dissertation"
+  year: 2026
